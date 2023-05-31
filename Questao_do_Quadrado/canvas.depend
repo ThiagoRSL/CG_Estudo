@@ -1373,3 +1373,106 @@
 	"gl_canvas2d.h"
 	<stdio.h>
 
+1685492945 source:c:\users\nektus\desktop\cg\cg_estudo\questao_do_quadrado\src\cameramanager.cpp
+	"CameraManager.h"
+
+1685492945 c:\users\nektus\desktop\cg\cg_estudo\questao_do_quadrado\src\cameramanager.h
+	"CameraManager.h"
+	"Utils/Pnt2.h"
+
+1685492945 c:\users\nektus\desktop\cg\cg_estudo\questao_do_quadrado\src\utils\pnt2.h
+
+1685492945 source:c:\users\nektus\desktop\cg\cg_estudo\questao_do_quadrado\src\gl_canvas2d.cpp
+	"gl_canvas2d.h"
+	<GL/glut.h>
+
+1685492945 c:\users\nektus\desktop\cg\cg_estudo\questao_do_quadrado\src\gl_canvas2d.h
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<string.h>
+	<GL/glut.h>
+	<GL/freeglut_ext.h>
+
+1685492945 c:\users\nektus\desktop\cg\cg_estudo\questao_do_quadrado\include\gl\glut.h
+	"freeglut_std.h"
+
+1685492945 c:\users\nektus\desktop\cg\cg_estudo\questao_do_quadrado\include\gl\freeglut_std.h
+	<windows.h>
+	<EGL/egl.h>
+	<GLES/gl.h>
+	<GLES2/gl2.h>
+	<OpenGL/gl.h>
+	<OpenGL/glu.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<stdlib.h>
+
+1685492945 c:\users\nektus\desktop\cg\cg_estudo\questao_do_quadrado\include\gl\freeglut_ext.h
+	<stdarg.h>
+
+1685492945 source:c:\users\nektus\desktop\cg\cg_estudo\questao_do_quadrado\src\mat.cpp
+	"Mat.h"
+
+1685492945 c:\users\nektus\desktop\cg\cg_estudo\questao_do_quadrado\src\mat.h
+	"gl_canvas2d.h"
+	<stdio.h>
+
+1685492945 source:c:\users\nektus\desktop\cg\cg_estudo\questao_do_quadrado\src\renderable.cpp
+	"Renderable.h"
+	"Utils/Vec2.h"
+
+1685492945 c:\users\nektus\desktop\cg\cg_estudo\questao_do_quadrado\src\renderable.h
+	<GL/glut.h>
+	<GL/freeglut_ext.h>
+	"Utils/Pnt2.h"
+	"CameraManager.h"
+
+1685492945 c:\users\nektus\desktop\cg\cg_estudo\questao_do_quadrado\src\utils\vec2.h
+	<math.h>
+	"gl_canvas2d.h"
+	"Utils/Pnt2.h"
+	"../Renderable.h"
+
+1685492945 source:c:\users\nektus\desktop\cg\cg_estudo\questao_do_quadrado\src\utils\curves.cpp
+	"Curves.h"
+
+1685492945 c:\users\nektus\desktop\cg\cg_estudo\questao_do_quadrado\src\utils\curves.h
+	"gl_canvas2d.h"
+	<vector>
+	"Pnt2.h"
+	"GeometryAux.h"
+	"Renderable.h"
+
+1685492945 c:\users\nektus\desktop\cg\cg_estudo\questao_do_quadrado\src\utils\geometryaux.h
+	<math.h>
+	"Pnt2.h"
+
+1685492945 source:c:\users\nektus\desktop\cg\cg_estudo\questao_do_quadrado\src\utils\geometryaux.cpp
+	"GeometryAux.h"
+
+1685492945 source:c:\users\nektus\desktop\cg\cg_estudo\questao_do_quadrado\src\utils\pnt2.cpp
+	"Pnt2.h"
+	"Vec2.h"
+
+1685492945 source:c:\users\nektus\desktop\cg\cg_estudo\questao_do_quadrado\src\utils\vec2.cpp
+	"Vec2.h"
+	"GeometryAux.h"
+
+1685493204 source:c:\users\nektus\desktop\cg\cg_estudo\questao_do_quadrado\src\main.cpp
+	<GL/glut.h>
+	<GL/freeglut_ext.h>
+	<math.h>
+	<stdio.h>
+	<stdlib.h>
+	<string>
+	<set>
+	<iterator>
+	<cstdlib>
+	<iostream>
+	"gl_canvas2d.h"
+	"Utils/Vec2.h"
+	"Utils/Curves.h"
+	"Mat.h"
+	"CameraManager.h"
+
