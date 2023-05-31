@@ -78,9 +78,6 @@ void mouse(int button, int state, int wheel, int direction, int x, int y)
 
 int main(void)
 {
-    initial_x = 500;
-    initial_y = 670;
-
     float x1, y1, L;
     float x2 = 400, y2 = 400;
     linex = x2;
@@ -184,6 +181,10 @@ int main(void)
 
     int screenWidth = glutGet(GLUT_SCREEN_WIDTH);
     int screenHeight = glutGet(GLUT_SCREEN_HEIGHT);
+
+    //Definindo ponto origem no centro da tela.
+    initial_x = screenWidth/2;
+    initial_y = screenHeight/2;
 
     glutSetCursor(GLUT_CURSOR_CROSSHAIR);
     CV::run();
