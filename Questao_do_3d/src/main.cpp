@@ -63,10 +63,10 @@ void Reshape (int w, int h)
 
    //cria uma projecao ortografica com z entre (-1, 1).
    //parametros: left, right, bottom, top
-   gluOrtho2D (0.0, w, h, 0.0); //o eixo y cresce para baixo
+   //gluOrtho2D (0.0, w, h, 0.0); //o eixo y cresce para baixo
 
-   glMatrixMode(GL_MODELVIEW);
-   glLoadIdentity ();
+   //glMatrixMode(GL_MODELVIEW);
+   //glLoadIdentity ();
 }
 
 //Renderiza a tela
@@ -81,12 +81,12 @@ void Display (void)
     glMatrixMode(GL_PROJECTION);                    //Define a Pila de matrix que pode ser GL_Projection, GL_ModelView ou GL_Texture.
     glLoadIdentity( );                              //Carrega matriz identidade (Base da Pilha)
     gluPerspective(abertura, aspect, znear, zfar);
-    glMatrixMode(GL_MODELVIEW);
-    glShadeModel(GL_SMOOTH);
+    //glMatrixMode(GL_MODELVIEW);
+    //glShadeModel(GL_SMOOTH);
 
     glClear(GL_COLOR_BUFFER_BIT);
-    glMatrixMode(GL_MODELVIEW);
-    glLoadIdentity();
+    //glMatrixMode(GL_MODELVIEW);
+    //glLoadIdentity();
 
     gluLookAt(cam_pos_x, cam_pos_y, cam_pos_z,  //from. Posicao onde a camera esta posicionada
               cam_ori_x, cam_ori_y, cam_ori_z,  //to. Posicao absoluta onde a camera esta vendo
