@@ -46,11 +46,10 @@ void render()
     CV::color(1,1,1);
     // Desenha Eixos X e Y
     CV::line(initial_x,initial_y,initial_x+1600,initial_y);
-    CV::line(initial_x,initial_y,initial_x,0);
+    CV::line(initial_x,initial_y,initial_x,initial_y+1600);
 
     // Desenha linha formada por (x1, y0) e (x0, y1);
     CV::color(7);
-    CV::line(initial_x,initial_y-liney,initial_x+linex,initial_y);
 
     M->Draw(initial_x, initial_y, 2);
     M2->Draw(initial_x, initial_y, 3);
@@ -78,44 +77,47 @@ void mouse(int button, int state, int wheel, int direction, int x, int y)
 
 int main(void)
 {
-    float x1, y1, L;
-    float x2 = 400, y2 = 400;
+    float x0, y0, L;
+    L = 100;
+    x0 = 300;
+    y0 = 200;
+
+    float x1 = 0, y1 = 400;
+    float x2 = x0 - (L/2), y2 = y0 - (L/2);
+    float xm = (x0 + x1)/2, ym = (y0 + y1)/2;
     linex = x2;
     liney = y2;
 
-    L = 100;
-    x1 = -L;
-    y1 = 1;
 
     /* Define a matriz com os vetores que formam os pontos do quadrado. */
     M = new Mat(3,4);
-    *M->At(0,0) = x1;
-    *M->At(1,0) = y1;
+    *M->At(0,0) = x0 - L/2;
+    *M->At(1,0) = y0 + L/2;
     *M->At(2,0) = 1;
-    *M->At(0,1) = x1 + L;
-    *M->At(1,1) = y1;
+    *M->At(0,1) = x0 + L/2;
+    *M->At(1,1) = y0 + L/2;
     *M->At(2,1) = 1;
-    *M->At(0,2) = x1 + L;
-    *M->At(1,2) = y1 - L;
+    *M->At(0,2) = x0 + L/2;
+    *M->At(1,2) = y0 - L/2;
     *M->At(2,2) = 1;
-    *M->At(0,3) = x1;
-    *M->At(1,3) = y1 - L;
+    *M->At(0,3) = x0 - L/2;
+    *M->At(1,3) = y0 - L/2;
     *M->At(2,3) = 1;
     /* ------------------- */
 
     /* Define a matriz de translação que tras o quadrado à Origem. */
     Mat T1 = Mat(3,3);
     *T1.At(0,0) = 1;
-    *T1.At(0,2) = L;
+    *T1.At(0,2) = -(x0 - L/2);
     *T1.At(1,1) = 1;
-    *T1.At(1,2) = L;
+    *T1.At(1,2) = - (y0 - L/2);
     *T1.At(2,2) = 1;
     /* ------------------- */
 
     /* Define a matriz de para adequar a escala, alterando o tamanho dos lados para 1/3 do tamanho original. */
     Mat E = Mat(3,3);
-    *E.At(0,0) = 1/3.0;
-    *E.At(1,1) = 1/3.0;
+    *E.At(0,0) = 1/2.0;
+    *E.At(1,1) = 1/2.0;
     *E.At(2,2) = 1;
     /* ------------------- */
 
@@ -123,20 +125,21 @@ int main(void)
     //O Vetor formado por (-x1, y1) é paralelo ao vetor formado por (x1, 0) e (0, y1)
     //Define o v1 como o vetor formado pelos pontos x1 e y1 da questão.
     //
-    Vec2 v1 = Vec2(-x2, y2);
+    //Vec2 v1 = Vec2(-x2, y1 - y2);
     //Normaliza o vetor para cortar a divisão do produto interno futuramente
-    v1.Normalize();
+    //v1.Normalize();
     //Define um vetor já normalizado paralelo ao eixo Y.
-    Vec2 v2 = Vec2(0, 1);
+    //Vec2 v2 = Vec2(0, 1);
     //Encontra o angulo atraves do produto interno dos dois vetores.
-    float alfa = acos(v1.DotProduct(&v2));
+    float alfa = 135;
+    alfa = 2*3.14*(alfa/ 360);
 
     /* Define a matriz de rotação. */
     Mat R = Mat(3,3);
-    *R.At(0,0) = cos(alfa);
-    *R.At(0,1) = -sin(alfa);
-    *R.At(1,0) = sin(alfa);
-    *R.At(1,1) = cos(alfa);
+    *R.At(0,0) = cos(-alfa);
+    *R.At(0,1) = -sin(-alfa);
+    *R.At(1,0) = sin(-alfa);
+    *R.At(1,1) = cos(-alfa);
     *R.At(2,2) = 1;
     /* ------------------- */
 
@@ -145,7 +148,7 @@ int main(void)
     *T2.At(0,0) = 1;
     *T2.At(0,2) = x2;
     *T2.At(1,1) = 1;
-    *T2.At(1,2) = 0;
+    *T2.At(1,2) = y2;
     *T2.At(2,2) = 1;
     /* ------------------- */
 

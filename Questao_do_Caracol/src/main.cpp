@@ -52,8 +52,24 @@ void render()
 {
     CV::clear(0,0,0);
     CV::color(1,1,1);
+    //CV::circleFill(800,800,50,10);
+    int row = 400;
+    int col = 400;
+    int i, j;
+    float r, g, b;
+    for(i = 0; i < row; i++)
+    {
+        r = ((float) ((i*3 + j) % 256)) / 255;
+        g = ((float) ((i + j*3) % 256)) / 255;
+        b = ((float) ((i + j) % 256)) / 255;
+        CV::color(r,g,b);
+        for(j = 0; j < col; j++)
+        {
+            CV::point(i,j);
+        }
+    }
     // Desenha Eixos X e Y
-    CV::line(initial_x,initial_y,initial_x+1600,initial_y);
+    /*CV::line(initial_x,initial_y,initial_x+1600,initial_y);
     CV::line(initial_x,initial_y,initial_x,0);
 
     //Questão
@@ -84,7 +100,7 @@ void render()
         CV::circle(x_temp+initial_x, initial_y-y_temp, 2, 10);
         radius += radius_variation;
         angle += angle_variation;
-    }
+    }*/
 
 }
 
