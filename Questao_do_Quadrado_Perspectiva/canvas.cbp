@@ -58,18 +58,16 @@
 		</Linker>
 		<Unit filename="src/CameraManager.cpp" />
 		<Unit filename="src/CameraManager.h" />
-		<Unit filename="src/Mat.cpp" />
-		<Unit filename="src/Mat.h" />
 		<Unit filename="src/Renderable.cpp" />
 		<Unit filename="src/Renderable.h" />
 		<Unit filename="src/Utils/Curves.cpp" />
 		<Unit filename="src/Utils/Curves.h" />
 		<Unit filename="src/Utils/GeometryAux.cpp" />
 		<Unit filename="src/Utils/GeometryAux.h" />
-		<Unit filename="src/Utils/Pnt2.cpp" />
-		<Unit filename="src/Utils/Pnt2.h" />
-		<Unit filename="src/Utils/Vec2.cpp" />
-		<Unit filename="src/Utils/Vec2.h" />
+		<Unit filename="src/Utils/Mat.cpp" />
+		<Unit filename="src/Utils/Mat.h" />
+		<Unit filename="src/Utils/Vec3.cpp" />
+		<Unit filename="src/Utils/Vec3.h" />
 		<Unit filename="src/gl_canvas2d.cpp" />
 		<Unit filename="src/gl_canvas2d.h" />
 		<Unit filename="src/main.cpp" />

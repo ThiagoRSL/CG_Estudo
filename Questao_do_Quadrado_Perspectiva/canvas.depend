@@ -1562,12 +1562,16 @@
 	"Vec2.h"
 	"GeometryAux.h"
 
-1685578148 source:c:\users\nektus\desktop\cg\cg_estudo\questao_do_quadrado_perspectiva\src\cameramanager.cpp
+1689125943 source:c:\users\nektus\desktop\cg\cg_estudo\questao_do_quadrado_perspectiva\src\cameramanager.cpp
 	"CameraManager.h"
 
-1685578148 c:\users\nektus\desktop\cg\cg_estudo\questao_do_quadrado_perspectiva\src\cameramanager.h
-	"CameraManager.h"
+1689124979 c:\users\nektus\desktop\cg\cg_estudo\questao_do_quadrado_perspectiva\src\cameramanager.h
+	<math.h>
+	<stdio.h>
+	<stdlib.h>
+	"Vec3.h"
 	"Utils/Pnt2.h"
+	"CameraManager.h"
 
 1685578148 c:\users\nektus\desktop\cg\cg_estudo\questao_do_quadrado_perspectiva\src\utils\pnt2.h
 
@@ -1600,7 +1604,7 @@
 1685578148 c:\users\nektus\desktop\cg\cg_estudo\questao_do_quadrado_perspectiva\include\gl\freeglut_ext.h
 	<stdarg.h>
 
-1689096082 source:c:\users\nektus\desktop\cg\cg_estudo\questao_do_quadrado_perspectiva\src\main.cpp
+1689128011 source:c:\users\nektus\desktop\cg\cg_estudo\questao_do_quadrado_perspectiva\src\main.cpp
 	<GL/glut.h>
 	<GL/freeglut_ext.h>
 	<math.h>
@@ -1617,7 +1621,7 @@
 	"Utils/Mat.h"
 	"CameraManager.h"
 
-1685578148 c:\users\nektus\desktop\cg\cg_estudo\questao_do_quadrado_perspectiva\src\utils\vec2.h
+1689120242 c:\users\nektus\desktop\cg\cg_estudo\questao_do_quadrado_perspectiva\src\utils\vec2.h
 	<math.h>
 	"gl_canvas2d.h"
 	"Utils/Pnt2.h"
@@ -1640,11 +1644,15 @@
 	<math.h>
 	"Pnt2.h"
 
-1689096127 c:\users\nektus\desktop\cg\cg_estudo\questao_do_quadrado_perspectiva\src\utils\mat.h
+1689125752 c:\users\nektus\desktop\cg\cg_estudo\questao_do_quadrado_perspectiva\src\utils\mat.h
+	<math.h>
+	<stdio.h>
+	<stdlib.h>
 	"gl_canvas2d.h"
 	<stdio.h>
+	"CameraManager.h"
 
-1685578148 source:c:\users\nektus\desktop\cg\cg_estudo\questao_do_quadrado_perspectiva\src\renderable.cpp
+1689120253 source:c:\users\nektus\desktop\cg\cg_estudo\questao_do_quadrado_perspectiva\src\renderable.cpp
 	"Renderable.h"
 	"Utils/Vec2.h"
 
@@ -1661,7 +1669,15 @@
 	"Pnt2.h"
 	"Vec2.h"
 
-1685578148 source:c:\users\nektus\desktop\cg\cg_estudo\questao_do_quadrado_perspectiva\src\utils\vec2.cpp
+1689120510 source:c:\users\nektus\desktop\cg\cg_estudo\questao_do_quadrado_perspectiva\src\utils\vec2.cpp
 	"Vec2.h"
 	"GeometryAux.h"
+
+1689120868 c:\users\nektus\desktop\cg\cg_estudo\questao_do_quadrado_perspectiva\src\utils\vec3.h
+	<math.h>
+	<stdio.h>
+	<stdlib.h>
+
+1689120700 source:c:\users\nektus\desktop\cg\cg_estudo\questao_do_quadrado_perspectiva\src\utils\vec3.cpp
+	"Vec3.h"
 

@@ -2,23 +2,16 @@
 
 CameraManager::CameraManager()
 {
-    WindowOffset = Pnt2(0,0);
-    Anchor = new Pnt2(0,0);
+    CameraAt = Vec3(0,0,0);
+    CameraTo = Vec3(0,0,0);
+    CameraUp = Vec3(0,1,0);
 }
 
-void CameraManager::SetCameraAnchor(Pnt2* anchor)
+float CameraManager::DistanceFromCamera(float x, float y, float z)
 {
-    Anchor = anchor; //Seguindo esta ancôra
-}
-
-void CameraManager::SetCameraOffset(Pnt2 offset)
-{
-    WindowOffset.x = offset.x;
-    WindowOffset.y = offset.y;
-}
-
-void CameraManager::UpdateCameraOffset()
-{
-    CameraOffset.x = Anchor->x + WindowOffset.x;
-    CameraOffset.y = Anchor->y + WindowOffset.y;
+    float dx = this->CameraAt.x - x;
+    float dy = this->CameraAt.y - y;
+    float dz = this->CameraAt.z - z;
+    if(dx*dx + dy*dy + dz*dz < 0) printf("RAIZ QUADRADA DE NEGATIVO.");
+    return sqrtf(dx*dx + dy*dy + dz*dz);
 }

@@ -105,10 +105,6 @@ void Vec2::RotateRadians(float radians)
     this->y = (aux_x * sinf(radians)) + (aux_y * cosf(radians));
 }
 
-Pnt2 Vec2::AsPnt()
-{
-    return Pnt2(this->x, this->y);
-}
 
 float Vec2::RelativeX()
 {

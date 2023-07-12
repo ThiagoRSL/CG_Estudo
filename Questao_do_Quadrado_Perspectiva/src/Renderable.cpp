@@ -4,7 +4,7 @@
 
 Renderable::Renderable()
 {
-    CameraOffsetRef = CameraManager::shared_instance().GetCameraOffsetRef();
+    //CameraOffsetRef = CameraManager::shared_instance().GetCameraOffsetRef();
     Static(false);
     this->Anchor = nullptr;
     this->Offset = Pnt2(0,0);

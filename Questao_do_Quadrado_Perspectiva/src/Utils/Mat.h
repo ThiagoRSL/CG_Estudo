@@ -1,8 +1,12 @@
 #ifndef MAT_H
 #define MAT_H
 
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
 #include "gl_canvas2d.h"
 #include <stdio.h>
+#include "CameraManager.h"
 
 class Mat
 {
@@ -43,22 +47,44 @@ class Mat
         {
 
             int i;
+            glBegin(GL_LINES);
             for (i = 0; i < m; i++)
             {
-                CV::color(color);
-                CV::circle(x+internal_matrix[0][i]*scale, y+internal_matrix[1][i]*scale, 5, 30);
+                CV::color(2);
+                glVertex2d(x+internal_matrix[0][i],y+internal_matrix[1][i]);
             }
+            glEnd();
         }
 
-        void DrawPerspective(int x, int y, int color)
+        void DrawPerspective(int x, int y, int scale, int color)
         {
 
+            //Mat TPers = Mat(4,4);
+            //*TPers.At(0,0) = 1;
+            //*TPers.At(1,1) = 1;
+            //*TPers.At(3,2) = 1/d;
             int i;
-            for (i = 0; i < m; i++)
+            glBegin(GL_LINES);
+            for (i = 0; i < n; i++)
             {
-                CV::color(color);
-                CV::circle(x+internal_matrix[0][i], y+internal_matrix[1][i], 5, 30);
+                CV::color(2);
+                float x0 = internal_matrix[0][i];//*scale;
+                float y0 = internal_matrix[1][i];//*scale;
+                float z = internal_matrix[2][i];//*scale;
+                float d = CameraManager::shared_instance().ZDistanceFromCamera(z);
+                //CV::line(x0*d/z, y0*d/z);
+                if(z != 0)
+                {
+                    printf("Distancia da camera: %f   ||||| X' %f          Y' %f\n", d, x0*d/z, y0*d/z);
+                    glVertex2f(x + x0*d/z, y + y0*d/z);//CV::line();
+                }
+                else
+                {
+                    printf("ZERADO FI\n");
+                    glVertex2d(x,y);
+                }
             }
+            glEnd();
         }
 
         static Mat* Mult(Mat* A, Mat* B)
